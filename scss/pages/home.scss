@@ -1,0 +1,103 @@
+@import '../base/variables.scss';
+.page {
+}
+.home {
+
+		// .home__hero
+
+		&__hero {
+		}
+}
+
+//! hero 
+.hero-home {
+    background: url('/img/home-background.png') center/cover no-repeat;
+	color: $whiteColor;
+    // .hero-home__container
+		&__container {
+            
+		}
+            // .hero-home__wrapper
+    
+            &__wrapper {
+                padding-top: 170px;
+                padding-bottom: 140px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+@media screen and (min-width: $tablet) {
+    padding-top: 200px;
+    padding-bottom: 230px;
+}
+            }
+    
+            // .hero-home__logo
+    
+            &__logo {
+                @extend .header__logo;
+                display: inline-block;
+                @media screen and (min-width: $tablet){
+                    display: none;
+                }
+            }
+    
+		// .hero-home__contenet
+
+		&__content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-weight: 700;
+            align-items: center;
+            @media screen and (min-width: $tablet) {
+                gap: 30px;
+            }
+		}
+
+		// .hero-home__title
+
+		&__title {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 700;
+            @media screen and (min-width: $tablet) {
+                font-size: 52px;
+            }
+		}
+
+		// .hero-home__text
+
+		&__text {
+            font-family: $secondaryFontFamily;
+            font-weight: 300;
+            font-size: 18px;
+            @media screen and (min-width: $tablet) {
+                font-size: 24px;
+            }
+		}
+
+		// .hero-home__button
+
+		&__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $redColor;
+            font-weight: 700;
+            border-radius: 30px;
+            overflow: hidden;
+            transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+            padding: 13px 26px;
+            width: 100%;
+            &:hover {
+                background-color: $whiteColor;
+                color: $redColor;
+            }
+            @media screen and (min-width:400px) {
+                width: auto;
+            }
+		}
+}
