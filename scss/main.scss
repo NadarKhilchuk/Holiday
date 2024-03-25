@@ -5,6 +5,7 @@
 //!Import base
 @import './base/reset.scss';
 @import './base/variables.scss';
+@import './base/mixins.scss';
 
 body {
 	font-family: $mainFontFamily;
