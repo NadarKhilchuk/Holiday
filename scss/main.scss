@@ -11,20 +11,19 @@ body {
 	font-family: $mainFontFamily;
 	font-size: 14px;
 	line-height: normal;
-	color: $darkColor;
+	color: #1f373d;
 	font-style: normal;
-	font-weight: 700
 }
 
 .container {
-	min-width: 940px;
+	max-width: 1024px;
 	min-width: 320px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
 //! components
 @import './components/header.scss';
-
+@import './components/second-header.scss';
 
 //! pages
 @import './pages/home.scss'; 

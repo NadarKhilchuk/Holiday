@@ -1,72 +1,162 @@
 @import '../base/variables.scss';
-
 .header {
-position: absolute;
-top: 20px;
-width: 100%;
-color: $whiteColor;
-@media screen and (min-width: $tablet){
-    top: 36px;
-}
-// .header__container
-&__container {
-}
-// .header__wrapper
-&__wrapper {
-    @media screen and (min-width: $tablet){
+
+    // .header__container
+
+    &__container {
+        padding-top: 35px;
+        padding-bottom: 35px;
         display: flex;
-align-items: center;
+        align-items: center;
         justify-content: space-between;
-        gap: 30px;
+        gap: 15px;
+    }
+
+    // .header__title
+
+    &__title {
+        font-size: 25px;
+        font-weight: 600;
+        flex-grow: 1;
+    }
+
+    // .header__logo
+
+    &__logo {
+        color: #1f373d;
+    }
+
+    // .header__nav
+
+    &__nav {
+        flex-grow: 3;
+        @media screen and (max-width: $tablet) {
+            order: 1;
+        }
+    }
+
+    &__input,
+    &__label {
+        display: none;
+    }
+
+		// .header__input
+
+		&__input {
+            &:checked {
+~ .header__list {
+    display: flex;
+    flex-direction: column;
+
+}
+    ~ .header__label {
+        span {
+            transform: rotate(-45deg);
+            &::before{
+                top: 0;
+                transform: rotate(0);
+            }
+            &::after {
+                top: 0;
+                transform: rotate(90deg);
+            }
+        }
     }
 }
-// .header__logo
-&__logo {
-display: none;
-text-transform: uppercase;
-color: $whiteColor;
-font-weight: 700;
-font-style: 18px;
-letter-spacing: 0.05em;
-transition: color 0.3s ease 0s;
-@media screen and (min-width: $tablet){
-    display: inline-block;
-    font-size: 20px;
+		}
+
+		// .header__label
+
+		&__label {
+@media screen and (max-width: $tablet) {
+    position: relative;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    span {
+top: 15px;
+&,
+&::before,
+&::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    right: 0;
+    transition: all 0.3s ease 0s;
 }
-&:hover {
-    color: $redColor;
+&::before {
+    top: -8px;
 }
+&::after {
+    top: 8px;
 }
-// .header__items
-&__items {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 5px;
+    }
 }
-// .header__item
-&__item {
+		}
+
+    // .header__list
+
+    &__list {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-// .header__button
-&__button {
-display: inline-block;
-padding: 10px;
-border-radius: 30px;
-overflow: hidden;
-border: 2px solid transparent;
-transition: color 0.3s ease 0s, background-color 0.3s ease 0s,
-border-color 0.3s ease 0s;
-// .header__button-border
-&-border {
-border-color: $whiteColor;
-}
-&:hover {
-color: $darkColor;
-background-color: $whiteColor;
-border-color: $whiteColor;
-}
-}
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    @media screen and (max-width: $tablet) {
+        display: none;
+
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 100%;
+        background-color: $whiteColor;
+        padding: 20px;
+        box-shadow: 0 12px 8px #ececec;
+    }
+    }
+
+    // .header__item
+
+    &__item {
+    }
+
+    // .header__link
+
+    &__link {
+        color: #1f373d;
+    }
+
+    // .header__buttons
+
+    &__buttons {
+    }
+
+    // .header__button
+
+    &__button {
+flex-grow: 1;
+text-align: right;
+        transition: opacity 0.3s ease 0s;
+        &:hover {
+opacity: 0.7;
+        }
+
+        // .header__button-join
+
+        &-join {
+            padding: 0 20px;
+        }
+
+        // .header__button-started
+
+        &-started {
+            background-color: yellow;
+            border-radius: 10px;
+            padding: 14px 25px;
+        }
+    }
 }
